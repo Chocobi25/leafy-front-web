@@ -1,0 +1,133 @@
+/* src/components/TripStart/TripStart.module.css */
+
+/* 색상 팔레트 */
+:root {
+  --primary-green: #4caf50;
+  --light-green: #e8f5e9;
+  --text-color: #333;
+  --border-color: #ccc;
+  --hover-color: #f0f0f0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.title {
+  text-align: center;
+  color: var(--primary-green);
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+  flex: 1; /* 가로 정렬을 위해 추가 */
+}
+
+.label {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.boxWrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* 줄바꿈 허용 */
+}
+
+.inputBox {
+  flex: 1 1 0; /* 최소 너비 0, 공간 균등 분배 */
+  min-width: 150px;
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #777;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.inputBox:hover {
+  border-color: var(--primary-green);
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.15);
+}
+
+.inputBox.active {
+  border-color: var(--primary-green);
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);
+}
+
+.arrow {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.locationGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3열로 변경 */
+  gap: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: var(--light-green);
+  border-radius: 8px;
+}
+
+.locationItem {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  transition: all 0.2s ease-in-out;
+}
+
+.locationItem:hover {
+  background-color: var(--primary-green);
+  color: #fff;
+}
+
+.locationItem.selected {
+  background-color: var(--primary-green);
+  color: #fff;
+  font-weight: bold;
+  border-color: var(--primary-green);
+}
+
+.dateInput {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
+}
+
+.submitButton {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--primary-green);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.submitButton:hover {
+  background-color: #43a047;
+}
